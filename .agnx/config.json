@@ -1,0 +1,10 @@
+{
+  "appId": "vibe-kanban",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/BloopAI/vibe-kanban"
+  },
+  "updatedAt": "2026-10-19T20:49:54.793Z"
+}

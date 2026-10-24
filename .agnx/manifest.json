@@ -1,0 +1,31 @@
+{
+  "id": "vibe-kanban",
+  "name": "Vibe Kanban",
+  "version": "0.1.44",
+  "description": "Agnx 外置：Vibe Kanban —— 开源看板式 AI 编码代理编排台（Rust 服务 + React 前端），本机 8120 端口 Guest 嵌入",
+  "engines": { "agnx": ">=1.0.0" },
+  "main": "./dist/index.js",
+  "icon": "./.agnx/assets/icon.svg",
+  "iconDark": "./.agnx/assets/icon-dark.svg",
+  "platforms": {
+    "desktop": "supported",
+    "web": "unsupported",
+    "mobile": "unsupported"
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "preferStrategy": "auto"
+  },
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-vibe-kanban.mjs",
+    "stateFile": "vibe-kanban.json",
+    "defaultPort": 8120,
+    "label": "Vibe Kanban 服务"
+  },
+  "contributes": {
+    "commands": [{ "id": "vibe-kanban.open", "title": "Vibe Kanban" }],
+    "panels": [{ "id": "vibe-kanban.main", "title": "Vibe Kanban" }]
+  }
+}
